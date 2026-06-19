@@ -5,21 +5,21 @@ class Muaz < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/shigar-dev/muaz/releases/download/v0.0.1/muaz-aarch64-apple-darwin.tar.xz"
-      sha256 "01f2375887cf3c405945613da3f8ffdd79e50d77850415bed064dda38bfe1a9a"
+      sha256 "69ad42acf0ad782e29b46b81155093061ecaabfb93f69eee0f999e18d5067209"
     end
     if Hardware::CPU.intel?
       url "https://github.com/shigar-dev/muaz/releases/download/v0.0.1/muaz-x86_64-apple-darwin.tar.xz"
-      sha256 "08b4f14958a91d9532bb6fcd14c334b3e4ed7938e1539cdbe2bff6a8b4e6348a"
+      sha256 "ae29dc8379787e97b401f417428c26a0207f57366a7c6e0826b61363f2e9bc52"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/shigar-dev/muaz/releases/download/v0.0.1/muaz-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1fb24c01f86fa39fb91bba99fe17b616e7486d57c6619d421d33bb0edb6f335c"
+      sha256 "7a95ac5c73f223c58b917bf14b87c5770c1c4992f9e2b897995d2a12dd259463"
     end
     if Hardware::CPU.intel?
       url "https://github.com/shigar-dev/muaz/releases/download/v0.0.1/muaz-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "0fd688cb2fe4ae182d11868991b911112decafdd66924e678f07dc50b256028f"
+      sha256 "4c45875e541b32d3e8df4fd5eb6f6f6e1d25b96dd7108fdc7715b51ae673063c"
     end
   end
 
