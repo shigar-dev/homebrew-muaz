@@ -1,25 +1,25 @@
 class Muaz < Formula
   desc "AI agent CLI with embedded API and UI"
   homepage "https://github.com/shigar-dev/releases-muaz"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.2.0/muaz-aarch64-apple-darwin.tar.xz"
-      sha256 "f7b38d022e09d91bf3be4e5115340b0c1a41ec814d9e62071eeb922bff1952de"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-aarch64-apple-darwin.tar.xz"
+      sha256 "2bc2fdd4c5f84d7fe0cdab67c4706601a92c12a2dbba79bb370787bdc8d4a64b"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.2.0/muaz-x86_64-apple-darwin.tar.xz"
-      sha256 "dc1b45f03643af569a48f85d758742faff1515b51c15e5844856c761868b4dfa"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-x86_64-apple-darwin.tar.xz"
+      sha256 "c7bba9aea5fcbe2e4a6a181b777423cb516afdc379678b460d61eb4093ca874a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.2.0/muaz-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e51046f196f0833bfdd71cddf7a46a10966980735503c3bd73ddb47bb978d991"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "b1067cf206745bbd143cfcafe7f91c436faf548e0452b51b73f51315eac81d8a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.2.0/muaz-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "aa1c41bf135ff0510268c388158d8586a6bf05fe1c412812ef2c4d4e03d9859a"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "45a564fe65a297a4889fd5dc927de49f37e433565a64538cb5006329f6a4f6d9"
     end
   end
 
