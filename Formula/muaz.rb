@@ -1,25 +1,25 @@
 class Muaz < Formula
   desc "AI agent CLI with embedded API and UI"
   homepage "https://github.com/shigar-dev/releases-muaz"
-  version "0.3.0"
+  version "0.4.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-aarch64-apple-darwin.tar.xz"
-      sha256 "2bc2fdd4c5f84d7fe0cdab67c4706601a92c12a2dbba79bb370787bdc8d4a64b"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.4.0/muaz-aarch64-apple-darwin.tar.xz"
+      sha256 "bd700e42739f50f301fed706963949972ae9a555743093edb09acb3814d242df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-x86_64-apple-darwin.tar.xz"
-      sha256 "c7bba9aea5fcbe2e4a6a181b777423cb516afdc379678b460d61eb4093ca874a"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.4.0/muaz-x86_64-apple-darwin.tar.xz"
+      sha256 "f5ab593ed5d8cc15f8658d9341e38e3423ec5de88d0b27cc338609fa6b0a71f8"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "b1067cf206745bbd143cfcafe7f91c436faf548e0452b51b73f51315eac81d8a"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.4.0/muaz-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "abac7264cb70a775197ac0a3f23c1fc10231215e9d7f06046ff6b495f88c11c1"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.3.0/muaz-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "45a564fe65a297a4889fd5dc927de49f37e433565a64538cb5006329f6a4f6d9"
+      url "https://github.com/shigar-dev/releases-muaz/releases/download/v0.4.0/muaz-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "d5a40c22f823e197061cd5418197f097936aac29f2a02f51859eaa210dcfbd47"
     end
   end
 
@@ -47,10 +47,18 @@ class Muaz < Formula
   end
 
   def install
-    bin.install "muaz" if OS.mac? && Hardware::CPU.arm?
-    bin.install "muaz" if OS.mac? && Hardware::CPU.intel?
-    bin.install "muaz" if OS.linux? && Hardware::CPU.arm?
-    bin.install "muaz" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "muaz"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "muaz"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "muaz"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "muaz"
+    end
 
     install_binary_aliases!
 
